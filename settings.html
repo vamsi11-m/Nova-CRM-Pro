@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova CRM - Settings</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo-box">
+
+<div class="logo-circle">
+
+<i class="fa-solid fa-gear"></i>
+
+</div>
+
+<div>
+
+<h3>Nova CRM</h3>
+
+<span>System Settings</span>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-table-columns"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="leads.html">
+<i class="fa-solid fa-users"></i>
+<span>Leads</span>
+</a>
+</li>
+
+<li>
+<a href="analytics.html">
+<i class="fa-solid fa-chart-column"></i>
+<span>Analytics</span>
+</a>
+</li>
+
+<li>
+<a href="calendar.html">
+<i class="fa-solid fa-calendar-days"></i>
+<span>Calendar</span>
+</a>
+</li>
+
+<li class="active">
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+<div class="search-container">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search settings...">
+
+</div>
+
+<div class="top-actions">
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span class="notification-dot">
+
+3
+
+</span>
+
+</div>
+
+<div class="profile">
+
+N
+
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<p class="section-tag">
+
+SYSTEM CONFIGURATION
+
+</p>
+
+<h1>
+
+CRM
+<span>Settings</span>
+
+</h1>
+
+<p class="hero-text">
+
+Manage profile, notifications, security and company preferences.
+
+</p>
+
+</div>
+
+<button class="manage-btn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+
+</section>
+
+<!-- PROFILE SETTINGS -->
+
+<section class="settings-grid">
+
+<div class="settings-card">
+
+<div class="card-header">
+
+<div>
+
+<h3>Profile Information</h3>
+
+<p>Update your personal details</p>
+
+</div>
+
+</div>
+
+<div class="profile-section">
+
+<div class="profile-avatar">
+
+NV
+
+</div>
+
+<div>
+
+<h4>Nova CRM Admin</h4>
+
+<p>Administrator Account</p>
+
+</div>
+
+</div>
+
+<form class="settings-form">
+
+<div class="form-grid">
+
+<div class="input-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+value="Nova CRM Admin">
+
+</div>
+
+<div class="input-group">
+
+<label>Email Address</label>
+
+<input
+type="email"
+value="admin@novacrm.com">
+
+</div>
+
+<div class="input-group">
+
+<label>Phone Number</label>
+
+<input
+type="text"
+value="+91 9876543210">
+
+</div>
+
+<div class="input-group">
+
+<label>Job Title</label>
+
+<input
+type="text"
+value="CRM Administrator">
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+<!-- COMPANY INFO -->
+
+<div class="settings-card">
+
+<div class="card-header">
+
+<div>
+
+<h3>Company Information</h3>
+
+<p>Business profile details</p>
+
+</div>
+
+</div>
+
+<form class="settings-form">
+
+<div class="input-group">
+
+<label>Company Name</label>
+
+<input
+type="text"
+value="Nova CRM Solutions">
+
+</div>
+
+<div class="input-group">
+
+<label>Website</label>
+
+<input
+type="text"
+value="www.novacrm.com">
+
+</div>
+
+<div class="input-group">
+
+<label>Industry</label>
+
+<input
+type="text"
+value="Software Development">
+
+</div>
+
+<div class="input-group">
+
+<label>Company Size</label>
+
+<select>
+
+<option>1-10 Employees</option>
+<option>11-50 Employees</option>
+<option selected>51-200 Employees</option>
+<option>200+ Employees</option>
+
+</select>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+<!-- ====================================
+     NOTIFICATIONS & SECURITY
+==================================== -->
+
+<section class="settings-grid">
+
+    <!-- NOTIFICATIONS -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Notification Preferences</h3>
+
+                <p>Manage system alerts and updates</p>
+
+            </div>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Email Notifications</h4>
+
+                <p>Receive important CRM updates</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Lead Alerts</h4>
+
+                <p>Get notified when new leads arrive</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Meeting Reminders</h4>
+
+                <p>Receive calendar reminders</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Marketing Updates</h4>
+
+                <p>Product news and announcements</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <!-- SECURITY -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Security Settings</h3>
+
+                <p>Protect your CRM account</p>
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Current Password</label>
+
+            <input type="password" placeholder="••••••••">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>New Password</label>
+
+            <input type="password" placeholder="••••••••">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Confirm Password</label>
+
+            <input type="password" placeholder="••••••••">
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Two-Factor Authentication</h4>
+
+                <p>Extra security layer</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     THEME SETTINGS
+==================================== -->
+
+<section class="settings-grid">
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Theme Customization</h3>
+
+                <p>Personalize dashboard appearance</p>
+
+            </div>
+
+        </div>
+
+        <div class="theme-options">
+
+            <div class="theme-box active-theme">
+
+                <div class="theme-preview gold-theme"></div>
+
+                <h4>Nova Gold</h4>
+
+            </div>
+
+            <div class="theme-box">
+
+                <div class="theme-preview blue-theme"></div>
+
+                <h4>Ocean Blue</h4>
+
+            </div>
+
+            <div class="theme-box">
+
+                <div class="theme-preview purple-theme"></div>
+
+                <h4>Royal Purple</h4>
+
+            </div>
+
+            <div class="theme-box">
+
+                <div class="theme-preview green-theme"></div>
+
+                <h4>Emerald</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CRM PREFERENCES -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>CRM Preferences</h3>
+
+                <p>Customize workspace behavior</p>
+
+            </div>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Auto Save Leads</h4>
+
+                <p>Save changes automatically</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Dark Mode</h4>
+
+                <p>Enable dark interface</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Compact View</h4>
+
+                <p>Reduce spacing across dashboard</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-row">
+
+            <div>
+
+                <h4>Weekly Reports</h4>
+
+                <p>Email performance summaries</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ====================================
+     INTEGRATIONS & SYSTEM STATUS
+==================================== -->
+
+<section class="settings-grid">
+
+    <!-- API INTEGRATIONS -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Integrations</h3>
+
+                <p>Connected business services</p>
+
+            </div>
+
+        </div>
+
+        <div class="integration-item">
+
+            <div class="integration-left">
+
+                <div class="integration-icon">
+
+                    <i class="fa-brands fa-google"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Google Workspace</h4>
+
+                    <p>Calendar & Email Sync</p>
+
+                </div>
+
+            </div>
+
+            <span class="status-badge status-converted">
+
+                Connected
+
+            </span>
+
+        </div>
+
+        <div class="integration-item">
+
+            <div class="integration-left">
+
+                <div class="integration-icon">
+
+                    <i class="fa-brands fa-slack"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>Slack</h4>
+
+                    <p>Team Notifications</p>
+
+                </div>
+
+            </div>
+
+            <span class="status-badge status-converted">
+
+                Active
+
+            </span>
+
+        </div>
+
+        <div class="integration-item">
+
+            <div class="integration-left">
+
+                <div class="integration-icon">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>LinkedIn</h4>
+
+                    <p>Lead Generation</p>
+
+                </div>
+
+            </div>
+
+            <span class="status-badge status-contacted">
+
+                Pending
+
+            </span>
+
+        </div>
+
+        <div class="integration-item">
+
+            <div class="integration-left">
+
+                <div class="integration-icon">
+
+                    <i class="fa-solid fa-database"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>CRM Database</h4>
+
+                    <p>Cloud Storage Sync</p>
+
+                </div>
+
+            </div>
+
+            <span class="status-badge status-converted">
+
+                Online
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- SYSTEM STATUS -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>System Status</h3>
+
+                <p>Current platform health</p>
+
+            </div>
+
+        </div>
+
+        <div class="status-row">
+
+            <span>Server Uptime</span>
+            <strong>99.98%</strong>
+
+        </div>
+
+        <div class="status-row">
+
+            <span>Database Health</span>
+            <strong>Excellent</strong>
+
+        </div>
+
+        <div class="status-row">
+
+            <span>API Response</span>
+            <strong>128 ms</strong>
+
+        </div>
+
+        <div class="status-row">
+
+            <span>Storage Usage</span>
+            <strong>68%</strong>
+
+        </div>
+
+        <div class="status-row">
+
+            <span>Security Score</span>
+            <strong>95/100</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     ACTIVITY LOG
+==================================== -->
+
+<section class="settings-card">
+
+    <div class="card-header">
+
+        <div>
+
+            <h3>Recent Activity Log</h3>
+
+            <p>Latest configuration updates</p>
+
+        </div>
+
+    </div>
+
+    <div class="activity-item">
+
+        <div class="activity-icon green-bg">
+
+            <i class="fa-solid fa-user-gear"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Profile Updated</h4>
+
+            <p>User information modified successfully</p>
+
+        </div>
+
+        <span>Today</span>
+
+    </div>
+
+    <div class="activity-item">
+
+        <div class="activity-icon blue-bg">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Security Settings Changed</h4>
+
+            <p>Password policy updated</p>
+
+        </div>
+
+        <span>Yesterday</span>
+
+    </div>
+
+    <div class="activity-item">
+
+        <div class="activity-icon gold-bg">
+
+            <i class="fa-solid fa-plug"></i>
+
+        </div>
+
+        <div>
+
+            <h4>New Integration Connected</h4>
+
+            <p>Slack workspace linked successfully</p>
+
+        </div>
+
+        <span>2 Days Ago</span>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     SAVE SETTINGS MODAL
+==================================== -->
+
+<div class="modal-overlay" id="saveModal">
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+
+            <h3>Save Settings</h3>
+
+        </div>
+
+        <p style="margin:20px 0;color:var(--muted);">
+
+            Are you sure you want to save all configuration changes?
+
+        </p>
+
+        <div class="modal-actions">
+
+            <button class="secondary-btn" id="cancelSave">
+
+                Cancel
+
+            </button>
+
+            <button class="manage-btn" id="confirmSave">
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================================
+     FOOTER
+==================================== -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 Nova CRM Settings Center • Secure Configuration Management
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+  </html>
+      
