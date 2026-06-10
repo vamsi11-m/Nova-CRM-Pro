@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova CRM - Calendar</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo-box">
+
+<div class="logo-circle">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+</div>
+
+<div>
+
+<h3>Nova CRM</h3>
+
+<span>Schedule Hub</span>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-table-columns"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="leads.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>Leads</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="analytics.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<span>Analytics</span>
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="calendar.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span>Calendar</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+<div class="search-container">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search meetings...">
+
+</div>
+
+<div class="top-actions">
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span class="notification-dot">
+
+4
+
+</span>
+
+</div>
+
+<div class="profile">
+
+N
+
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<p class="section-tag">
+
+MEETING MANAGEMENT
+
+</p>
+
+<h1>
+
+Calendar
+<span>Schedule</span>
+
+</h1>
+
+<p class="hero-text">
+
+Manage appointments, follow-ups, demos and client meetings.
+
+</p>
+
+</div>
+
+<button class="manage-btn" id="addEventBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Event
+
+</button>
+
+</section>
+
+<!-- KPI CARDS -->
+
+<section class="stats-grid">
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+TODAY'S EVENTS
+
+</p>
+
+<h2>
+
+8
+
+</h2>
+
+<span class="card-sub">
+
+2 Upcoming
+
+</span>
+
+</div>
+
+<div class="card-icon gold">
+
+<i class="fa-solid fa-calendar-day"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+MEETINGS
+
+</p>
+
+<h2>
+
+24
+
+</h2>
+
+<span class="card-sub">
+
+This Month
+
+</span>
+
+</div>
+
+<div class="card-icon green">
+
+<i class="fa-solid fa-handshake"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+FOLLOW UPS
+
+</p>
+
+<h2>
+
+12
+
+</h2>
+
+<span class="card-sub">
+
+Pending
+
+</span>
+
+</div>
+
+<div class="card-icon cyan">
+
+<i class="fa-solid fa-phone"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+COMPLETED
+
+</p>
+
+<h2>
+
+47
+
+</h2>
+
+<span class="card-sub">
+
+This Month
+
+</span>
+
+</div>
+
+<div class="card-icon yellow">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CALENDAR HEADER -->
+
+<section class="calendar-toolbar">
+
+<button class="secondary-btn">
+
+<i class="fa-solid fa-chevron-left"></i>
+
+</button>
+
+<h2>
+
+May 2026
+
+</h2>
+
+<button class="secondary-btn">
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</button>
+
+</section>
+<!-- ====================================
+     CALENDAR SECTION
+==================================== -->
+
+<section class="calendar-layout">
+
+    <!-- CALENDAR GRID -->
+
+    <div class="calendar-card">
+
+        <div class="weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+        <div class="calendar-grid">
+
+            <div class="day-cell muted">26</div>
+            <div class="day-cell muted">27</div>
+            <div class="day-cell muted">28</div>
+            <div class="day-cell muted">29</div>
+            <div class="day-cell muted">30</div>
+
+            <div class="day-cell">
+                <span class="day-number">1</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">2</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">3</span>
+
+                <div class="event blue">
+
+                    Team Meeting
+
+                </div>
+
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">4</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">5</span>
+
+                <div class="event gold">
+
+                    Client Demo
+
+                </div>
+
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">6</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">7</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">8</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">9</span>
+
+                <div class="event green">
+
+                    Follow Up
+
+                </div>
+
+            </div>
+
+            <div class="day-cell today">
+
+                <span class="day-number">10</span>
+
+                <div class="event purple">
+
+                    Product Call
+
+                </div>
+
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">11</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">12</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">13</span>
+
+                <div class="event red">
+
+                    Contract Review
+
+                </div>
+
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">14</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">15</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">16</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">17</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">18</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">19</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">20</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">21</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">22</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">23</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">24</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">25</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">26</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">27</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">28</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">29</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">30</span>
+            </div>
+
+            <div class="day-cell">
+                <span class="day-number">31</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SIDEBAR WIDGETS -->
+
+    <div class="schedule-panel">
+
+        <!-- TODAY SCHEDULE -->
+
+        <div class="chart-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>Today's Schedule</h3>
+
+                    <p>Upcoming events</p>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <span class="time">09:00</span>
+
+                <div>
+
+                    <h4>Sales Team Standup</h4>
+
+                    <p>Conference Room</p>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <span class="time">11:30</span>
+
+                <div>
+
+                    <h4>Client Demo</h4>
+
+                    <p>Zoom Meeting</p>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <span class="time">03:00</span>
+
+                <div>
+
+                    <h4>Product Review</h4>
+
+                    <p>Internal Meeting</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- UPCOMING MEETINGS -->
+
+        <div class="chart-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>Upcoming Meetings</h3>
+
+                    <p>Next 7 Days</p>
+
+                </div>
+
+            </div>
+
+            <div class="meeting-item">
+
+                <div>
+
+                    <h4>ABC Corp Demo</h4>
+
+                    <p>12 May • 10:00 AM</p>
+
+                </div>
+
+                <span class="status-badge status-contacted">
+
+                    Demo
+
+                </span>
+
+            </div>
+
+            <div class="meeting-item">
+
+                <div>
+
+                    <h4>Growth Labs Review</h4>
+
+                    <p>14 May • 02:00 PM</p>
+
+                </div>
+
+                <span class="status-badge status-new">
+
+                    Review
+
+                </span>
+
+            </div>
+
+            <div class="meeting-item">
+
+                <div>
+
+                    <h4>Vision Corp Call</h4>
+
+                    <p>16 May • 11:00 AM</p>
+
+                </div>
+
+                <span class="status-badge status-converted">
+
+                    Client
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ====================================
+     RECENT ACTIVITY
+==================================== -->
+
+<section class="bottom-grid">
+
+    <div class="activity-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Recent Activity</h3>
+
+                <p>Latest schedule updates</p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon green-bg">
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+            </div>
+
+            <div>
+
+                <h4>New Client Meeting Added</h4>
+
+                <p>ABC Technologies Demo Session</p>
+
+            </div>
+
+            <span>10 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon blue-bg">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Meeting Rescheduled</h4>
+
+                <p>Vision Corp Discussion</p>
+
+            </div>
+
+            <span>1 hour ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon gold-bg">
+
+                <i class="fa-solid fa-user-check"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Client Confirmed Attendance</h4>
+
+                <p>Growth Labs Review Meeting</p>
+
+            </div>
+
+            <span>Today</span>
+
+        </div>
+
+    </div>
+
+    <!-- EVENT SUMMARY -->
+
+    <div class="hot-leads-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Event Summary</h3>
+
+                <p>This Month</p>
+
+            </div>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Total Events</h4>
+
+                <p>Scheduled meetings</p>
+
+            </div>
+
+            <span class="priority-high">
+
+                47
+
+            </span>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Completed</h4>
+
+                <p>Successfully finished</p>
+
+            </div>
+
+            <span class="priority-medium">
+
+                32
+
+            </span>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Upcoming</h4>
+
+                <p>Next scheduled</p>
+
+            </div>
+
+            <span class="priority-high">
+
+                15
+
+            </span>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Attendance Rate</h4>
+
+                <p>Meeting participation</p>
+
+            </div>
+
+            <span class="priority-medium">
+
+                94%
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     ADD EVENT MODAL
+==================================== -->
+
+<div class="modal-overlay" id="eventModal">
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+
+            <h3>Create New Event</h3>
+
+            <button class="close-modal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <form id="eventForm">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Event Title</label>
+
+                    <input
+                    type="text"
+                    placeholder="Client Meeting">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Client Name</label>
+
+                    <input
+                    type="text"
+                    placeholder="ABC Corp">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Date</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Time</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="input-group full-width">
+
+                    <label>Description</label>
+
+                    <input
+                    type="text"
+                    placeholder="Meeting details">
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button
+                type="button"
+                class="secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                type="submit"
+                class="manage-btn">
+
+                    Save Event
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ====================================
+     FOOTER
+==================================== -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 Nova CRM Calendar Suite • Smart Scheduling Platform
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="calendar.js"></script>
+
+</body>
+  </html>
+  
