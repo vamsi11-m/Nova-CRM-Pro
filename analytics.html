@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova CRM - Analytics</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo-box">
+
+<div class="logo-circle">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<div>
+
+<h3>Nova CRM</h3>
+
+<span>Analytics Suite</span>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-table-columns"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="leads.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>Leads</span>
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="analytics.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<span>Analytics</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="calendar.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span>Calendar</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+<div class="search-container">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search analytics reports...">
+
+</div>
+
+<div class="top-actions">
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span class="notification-dot">
+
+5
+
+</span>
+
+</div>
+
+<div class="profile">
+
+A
+
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<p class="section-tag">
+
+ANALYTICS CENTER
+
+</p>
+
+<h1>
+
+Business
+<span>Insights</span>
+
+</h1>
+
+<p class="hero-text">
+
+Track revenue, conversions, lead performance and growth trends.
+
+</p>
+
+</div>
+
+<button class="manage-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Export Report
+
+</button>
+
+</section>
+
+<!-- KPI ROW -->
+
+<section class="stats-grid">
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+TOTAL REVENUE
+
+</p>
+
+<h2>
+
+$124K
+
+</h2>
+
+<span class="card-sub">
+
++18% Growth
+
+</span>
+
+</div>
+
+<div class="card-icon gold">
+
+<i class="fa-solid fa-dollar-sign"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+CONVERSION RATE
+
+</p>
+
+<h2>
+
+30%
+
+</h2>
+
+<span class="card-sub">
+
++4% Increase
+
+</span>
+
+</div>
+
+<div class="card-icon green">
+
+<i class="fa-solid fa-bullseye"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+ACTIVE CLIENTS
+
+</p>
+
+<h2>
+
+286
+
+</h2>
+
+<span class="card-sub">
+
++23 New
+
+</span>
+
+</div>
+
+<div class="card-icon cyan">
+
+<i class="fa-solid fa-user-group"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="card-top">
+
+<div>
+
+<p class="card-label">
+
+ROI
+
+</p>
+
+<h2>
+
+215%
+
+</h2>
+
+<span class="card-sub">
+
+Excellent Performance
+
+</span>
+
+</div>
+
+<div class="card-icon yellow">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ====================================
+     ANALYTICS CHARTS
+==================================== -->
+
+<section class="analytics-grid">
+
+    <!-- REVENUE TREND -->
+
+    <div class="chart-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Revenue Trend</h3>
+
+                <p>Monthly business growth</p>
+
+            </div>
+
+            <button class="mini-btn">
+
+                Monthly
+
+            </button>
+
+        </div>
+
+        <canvas id="revenueChart"></canvas>
+
+    </div>
+
+    <!-- CONVERSION FUNNEL -->
+
+    <div class="chart-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Conversion Funnel</h3>
+
+                <p>Lead journey analysis</p>
+
+            </div>
+
+        </div>
+
+        <canvas id="funnelChart"></canvas>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     SECOND ROW
+==================================== -->
+
+<section class="analytics-grid second-grid">
+
+    <!-- LEAD SOURCES -->
+
+    <div class="chart-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Lead Sources</h3>
+
+                <p>Where customers come from</p>
+
+            </div>
+
+        </div>
+
+        <canvas id="leadSourceChart"></canvas>
+
+    </div>
+
+    <!-- PERFORMANCE OVERVIEW -->
+
+    <div class="chart-card summary-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Performance Overview</h3>
+
+                <p>Current metrics</p>
+
+            </div>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>Sales Growth</span>
+
+            <strong>+24%</strong>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>Customer Retention</span>
+
+            <strong>92%</strong>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>Lead Response Time</span>
+
+            <strong>1.8 hrs</strong>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>Avg Deal Size</span>
+
+            <strong>$4,250</strong>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>Customer Satisfaction</span>
+
+            <strong>4.8/5</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     THIRD ROW
+==================================== -->
+
+<section class="analytics-grid">
+
+    <!-- SALES PERFORMANCE -->
+
+    <div class="chart-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Sales Performance</h3>
+
+                <p>Quarterly comparison</p>
+
+            </div>
+
+        </div>
+
+        <canvas id="salesPerformanceChart"></canvas>
+
+    </div>
+
+    <!-- TOP PERFORMERS -->
+
+    <div class="chart-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Top Performers</h3>
+
+                <p>Best sales representatives</p>
+
+            </div>
+
+        </div>
+
+        <div class="leaderboard">
+
+            <div class="leader-item">
+
+                <div>
+
+                    <h4>Sarah Johnson</h4>
+
+                    <p>Senior Executive</p>
+
+                </div>
+
+                <strong>$42K</strong>
+
+            </div>
+
+            <div class="leader-item">
+
+                <div>
+
+                    <h4>Michael Brown</h4>
+
+                    <p>Sales Manager</p>
+
+                </div>
+
+                <strong>$35K</strong>
+
+            </div>
+
+            <div class="leader-item">
+
+                <div>
+
+                    <h4>Emma Wilson</h4>
+
+                    <p>Business Consultant</p>
+
+                </div>
+
+                <strong>$29K</strong>
+
+            </div>
+
+            <div class="leader-item">
+
+                <div>
+
+                    <h4>David Lee</h4>
+
+                    <p>Account Executive</p>
+
+                </div>
+
+                <strong>$24K</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ====================================
+     REPORTS & INSIGHTS
+==================================== -->
+
+<section class="bottom-grid">
+
+    <!-- RECENT REPORTS -->
+
+    <div class="activity-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Recent Reports</h3>
+
+                <p>Latest generated reports</p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon green-bg">
+
+                <i class="fa-solid fa-file-chart-column"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Revenue Report</h4>
+
+                <p>Monthly revenue performance analysis</p>
+
+            </div>
+
+            <span>Today</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon blue-bg">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Lead Source Report</h4>
+
+                <p>Traffic and acquisition channels</p>
+
+            </div>
+
+            <span>Yesterday</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon gold-bg">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Client Growth Report</h4>
+
+                <p>Customer acquisition trends</p>
+
+            </div>
+
+            <span>2 Days Ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon purple-bg">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Conversion Report</h4>
+
+                <p>Lead funnel effectiveness</p>
+
+            </div>
+
+            <span>Last Week</span>
+
+        </div>
+
+    </div>
+
+    <!-- INSIGHTS -->
+
+    <div class="hot-leads-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>AI Insights</h3>
+
+                <p>Recommendations</p>
+
+            </div>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>LinkedIn Leads</h4>
+
+                <p>Highest conversion source</p>
+
+            </div>
+
+            <span class="priority-high">
+
+                +32%
+
+            </span>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Response Time</h4>
+
+                <p>Improved this month</p>
+
+            </div>
+
+            <span class="priority-medium">
+
+                1.8h
+
+            </span>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Revenue Growth</h4>
+
+                <p>Strong upward trend</p>
+
+            </div>
+
+            <span class="priority-high">
+
+                +18%
+
+            </span>
+
+        </div>
+
+        <div class="lead-priority">
+
+            <div>
+
+                <h4>Customer Retention</h4>
+
+                <p>Above industry average</p>
+
+            </div>
+
+            <span class="priority-medium">
+
+                92%
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================
+     EXPORT HISTORY
+==================================== -->
+
+<section class="table-card">
+
+    <div class="table-header">
+
+        <div>
+
+            <h3>Export History</h3>
+
+            <p>Previously generated analytics reports</p>
+
+        </div>
+
+    </div>
+
+    <div class="table-wrapper">
+
+        <table class="lead-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Report Name</th>
+
+                    <th>Generated By</th>
+
+                    <th>Date</th>
+
+                    <th>Format</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Revenue Analysis</td>
+
+                    <td>Admin</td>
+
+                    <td>12 May 2026</td>
+
+                    <td>PDF</td>
+
+                    <td>
+                        <span class="status-badge status-converted">
+                            Completed
+                        </span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Lead Source Report</td>
+
+                    <td>Admin</td>
+
+                    <td>10 May 2026</td>
+
+                    <td>Excel</td>
+
+                    <td>
+                        <span class="status-badge status-converted">
+                            Completed
+                        </span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Sales Performance</td>
+
+                    <td>Manager</td>
+
+                    <td>07 May 2026</td>
+
+                    <td>PDF</td>
+
+                    <td>
+                        <span class="status-badge status-contacted">
+                            Processing
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 Nova CRM Analytics Suite • Advanced Business Intelligence Dashboard
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="analytics.js"></script>
+
+</body>
+              </html>
