@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova CRM - Leads</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo-box">
+
+<div class="logo-circle">
+<i class="fa-solid fa-sparkles"></i>
+</div>
+
+<div>
+<h3>Nova CRM</h3>
+<span>Lead OS</span>
+</div>
+
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-table-columns"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li class="active">
+<a href="leads.html">
+<i class="fa-solid fa-users"></i>
+<span>Leads</span>
+</a>
+</li>
+
+<li>
+<a href="analytics.html">
+<i class="fa-solid fa-chart-column"></i>
+<span>Analytics</span>
+</a>
+</li>
+
+<li>
+<a href="calendar.html">
+<i class="fa-solid fa-calendar-days"></i>
+<span>Calendar</span>
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+<div class="search-container">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search leads..."
+id="leadSearch">
+
+</div>
+
+<div class="top-actions">
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span class="notification-dot">
+3
+</span>
+
+</div>
+
+<div class="profile">
+<span>N</span>
+</div>
+
+</div>
+
+</header>
+
+<!-- PAGE HEADER -->
+
+<section class="hero">
+
+<div>
+
+<p class="section-tag">
+LEAD MANAGEMENT
+</p>
+
+<h1>
+Manage
+<span>Leads</span>
+</h1>
+
+<p class="hero-text">
+Track, update and convert your prospects.
+</p>
+
+</div>
+
+<button class="manage-btn">
+
+<i class="fa-solid fa-plus"></i>
+
+New Lead
+
+</button>
+
+</section>
+
+<!-- TOOLBAR -->
+
+<section class="lead-toolbar">
+
+<div class="toolbar-left">
+
+<select id="statusFilter">
+
+<option>All Status</option>
+<option>New</option>
+<option>Contacted</option>
+<option>Converted</option>
+<option>Lost</option>
+
+</select>
+
+<select id="priorityFilter">
+
+<option>All Priority</option>
+<option>High</option>
+<option>Medium</option>
+<option>Low</option>
+
+</select>
+
+</div>
+
+<div class="toolbar-right">
+
+<button class="secondary-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Export
+
+</button>
+
+<button class="manage-btn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Lead
+
+</button>
+
+</div>
+
+</section>
+<!-- LEADS TABLE -->
+
+<section class="table-card">
+
+    <div class="table-header">
+
+        <div>
+
+            <h3>Lead Database</h3>
+
+            <p>
+                Manage and track all prospects
+            </p>
+
+        </div>
+
+        <span class="lead-count">
+            10 Leads
+        </span>
+
+    </div>
+
+    <div class="table-wrapper">
+
+        <table class="lead-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Company</th>
+
+                    <th>Status</th>
+
+                    <th>Priority</th>
+
+                    <th>Value</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="leadTableBody">
+
+                <!-- ROW 1 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="user-cell">
+
+                            <div class="user-avatar">
+                                J
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    John Smith
+                                </strong>
+
+                                <small>
+                                    john@abctech.com
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>ABC Tech</td>
+
+                    <td>
+
+                        <span class="status-badge status-new">
+                            New
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="priority-badge high">
+                            High
+                        </span>
+
+                    </td>
+
+                    <td>$5,000</td>
+
+                    <td>
+
+                        <div class="action-buttons">
+
+                            <button class="icon-btn view-btn">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                            <button class="icon-btn edit-btn">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="icon-btn delete-btn">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <!-- ROW 2 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="user-cell">
+
+                            <div class="user-avatar">
+                                A
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Alex Johnson
+                                </strong>
+
+                                <small>
+                                    alex@growthlabs.com
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Growth Labs</td>
+
+                    <td>
+
+                        <span class="status-badge status-contacted">
+                            Contacted
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="priority-badge medium">
+                            Medium
+                        </span>
+
+                    </td>
+
+                    <td>$3,500</td>
+
+                    <td>
+
+                        <div class="action-buttons">
+
+                            <button class="icon-btn view-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="icon-btn edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="icon-btn delete-btn">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <!-- ROW 3 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="user-cell">
+
+                            <div class="user-avatar">
+                                E
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Emma Wilson
+                                </strong>
+
+                                <small>
+                                    emma@startup.io
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Startup.io</td>
+
+                    <td>
+
+                        <span class="status-badge status-converted">
+                            Converted
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="priority-badge high">
+                            High
+                        </span>
+
+                    </td>
+
+                    <td>$8,500</td>
+
+                    <td>
+
+                        <div class="action-buttons">
+
+                            <button class="icon-btn view-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="icon-btn edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="icon-btn delete-btn">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <!-- ROW 4 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="user-cell">
+
+                            <div class="user-avatar">
+                                D
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    David Lee
+                                </strong>
+
+                                <small>
+                                    david@visioncorp.com
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Vision Corp</td>
+
+                    <td>
+
+                        <span class="status-badge status-lost">
+                            Lost
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="priority-badge low">
+                            Low
+                        </span>
+
+                    </td>
+
+                    <td>$1,200</td>
+
+                    <td>
+
+                        <div class="action-buttons">
+
+                            <button class="icon-btn view-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="icon-btn edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="icon-btn delete-btn">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ADD LEAD MODAL -->
+
+<div class="modal-overlay" id="leadModal">
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+
+            <h3>Add New Lead</h3>
+
+            <button class="close-modal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <form id="leadForm">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                    type="text"
+                    placeholder="John Smith">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Company
+                    </label>
+
+                    <input
+                    type="text"
+                    placeholder="ABC Tech">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                    type="email"
+                    placeholder="john@email.com">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Phone
+                    </label>
+
+                    <input
+                    type="text"
+                    placeholder="+91 XXXXX XXXXX">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Status
+                    </label>
+
+                    <select>
+
+                        <option>New</option>
+                        <option>Contacted</option>
+                        <option>Converted</option>
+                        <option>Lost</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Priority
+                    </label>
+
+                    <select>
+
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group full-width">
+
+                    <label>
+                        Deal Value
+                    </label>
+
+                    <input
+                    type="number"
+                    placeholder="5000">
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button
+                type="button"
+                class="secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                type="submit"
+                class="manage-btn">
+
+                    Save Lead
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+     LEAD DETAILS MODAL
+========================== -->
+
+<div class="modal-overlay" id="viewLeadModal">
+
+    <div class="modal-card details-card">
+
+        <div class="modal-header">
+
+            <h3>Lead Details</h3>
+
+            <button class="close-modal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <div class="lead-profile">
+
+            <div class="lead-avatar">
+
+                J
+
+            </div>
+
+            <h2>John Smith</h2>
+
+            <p>ABC Tech</p>
+
+        </div>
+
+        <div class="lead-details">
+
+            <div class="detail-row">
+
+                <span>Email</span>
+
+                <strong>
+                    john@abctech.com
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Phone</span>
+
+                <strong>
+                    +91 9876543210
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Status</span>
+
+                <strong>
+                    New
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Priority</span>
+
+                <strong>
+                    High
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Deal Value</span>
+
+                <strong>
+                    $5,000
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="leads.js"></script>
+
+</body>
+                              </html>
